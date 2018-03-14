@@ -1,5 +1,10 @@
+var words = 0;
 
-var QuestionsAndAnswers = [
+
+
+
+
+var questionsAndAnswers = [
 
 	{
 		question: "What does Dumbledore find in the Room of Requriement?",
@@ -19,32 +24,38 @@ var QuestionsAndAnswers = [
 			b: "Peeves",
 			c: "The Grey Lady",
 			d: "The bloody Baron"
-		}
+		},
 		correctAnswer: "b"
 	},
 
 	{
-		question: "Which Defense Against the Dark Arts teacher filled his office with pictures of himself?"
+		question: "Which Defense Against the Dark Arts teacher filled his office with pictures of himself?",
 		answers: {
 			a: "Quirrel",
 			b: "Lupin",
 			c: "Lockhart",
 			d: "Moody"
-		}
+		},
 		correctAnswer: "c"
 	},
 
 	{
-		question: "How do first year students get to Hogwarts after exiting the train?"
+		question: "How do first year students get to Hogwarts after exiting the train?",
 		answers: {
 			a: "Hippogriffs",
 			b: "Broomsticks",
 			c: "side-Along-Apparition",
 			d: "Magical boats across the lake"
-		}
+		},
 		correctAnswer: "d"
 	}
 ];
+
+console.log(questionsAndAnswers);
+
+// display questions
+
+// function showQuestions()
 
 
 
