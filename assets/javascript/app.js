@@ -1,4 +1,6 @@
-var words = 0;
+var correctAnswer;
+var wrongAnswer;
+var question;
 
 
 
@@ -51,11 +53,70 @@ var questionsAndAnswers = [
 	}
 ];
 
-console.log(questionsAndAnswers);
 
 // display questions
 
-// function showQuestions()
+
+function showTrivia() {
+	$("#questionsDiv").html(questionsAndAnswers[0].question);
+	// question++
+
+	var answersArr = questionsAndAnswers[0].answers;
+	var buttonsArr = [];
+
+	for (let i = 0; i < answersArr.length; i++) {
+		var button = $('<button>');
+		button.text(answersArr[i]);
+		button.attr('data-id', i);
+		$('#answersDiv').append(button);
+	}
+
+
+
+
+}
+showTrivia() 
+
+// console.log(questionsAndAnswers[0])
+
+
+
+
+
+
+
+
+
+
+// function showQuestions(questions, quizContainer) {
+
+// 	var output = [];
+// 	var answers;
+
+// 	for(var i = 0; i < questions.length; i++) {
+// 		answers = [];
+
+// 		for(letter in questions[i].answers){
+
+// 			answers.push(
+// 				'<label>'
+// 					+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
+// 					+ letter + ': '
+// 					+ questions[i].answers[letter]
+// 				+ '</label>' 
+// 				);
+// 		}
+
+// 	output.push(
+// 		'<div class="question">' + questions[i].question + '</div>'
+// 		+ '<div class="answers">' + answers.join('') + '</div>'
+
+// 		);
+// 	}
+
+// 	$("#quizContainer").output.push()
+
+// }
 
 
 
