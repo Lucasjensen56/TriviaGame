@@ -1,6 +1,11 @@
-var correctAnswer;
-var wrongAnswer;
+var correctAnswers;
+var wrongAnswers;
 var question;
+var userChoice;
+
+
+
+
 
 
 
@@ -10,15 +15,10 @@ var questionsAndAnswers = [
 
 	{
 		question: "What does Dumbledore find in the Room of Requriement?",
-		answers: {
-			a: "chamber pots",
-			b: "telescopes",
-			c: "feather dusters",
-			d: "pyjamas"
+		answers: ["Chamber pots", "Telescopes", "Feather dusters", "Pyjamas"],
+		correctAnswer: 0
 		},
-		correctAnswer: "a"
-	},
-
+	
 	{
 		question: "Who isn't a Hogwarts House Ghost?",
 		answers: {
@@ -74,49 +74,63 @@ function showTrivia() {
 
 
 
+
 }
+
+
+
+// playing game
+
+function gameStart() {
+
+	var countDown = function() {
+	$('.seconds').each(function() {
+		var count = parseInt($(this).html());
+		if (count !== 0) {
+			$(this).html(count -1);
+		}
+	});
+};
+
+setInterval(countDown, 1000)
+
+
+correctAnswers = 0;
+wrongAnswers = 0;
+
+
+$('#answersDiv').on('click', 'button', function(){
+	userChoice = $(this).data("id");
+	questionsAndAnswers[0].correctAnswer;
+	if(userChoice != questionsAndAnswers[0].correctAnswer){
+		$('#answersDiv').text("Wrong Answer!")
+		wrongAnswers++;
+		$('#wrongAnswers').text(wrongAnswers)
+	} else {
+		(userChoice = questionsAndAnswers[0].correctAnswer);
+		$('#answersDiv').text("Correct Answer")
+		correctAnswers++
+		$('#correctAnswers').text(correctAnswers)
+
+	}
+
+});
+
+
+
+}
+
+
+
+
 showTrivia() 
-
-// console.log(questionsAndAnswers[0])
-
+gameStart()
 
 
 
 
 
 
-
-
-
-// function showQuestions(questions, quizContainer) {
-
-// 	var output = [];
-// 	var answers;
-
-// 	for(var i = 0; i < questions.length; i++) {
-// 		answers = [];
-
-// 		for(letter in questions[i].answers){
-
-// 			answers.push(
-// 				'<label>'
-// 					+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
-// 					+ letter + ': '
-// 					+ questions[i].answers[letter]
-// 				+ '</label>' 
-// 				);
-// 		}
-
-// 	output.push(
-// 		'<div class="question">' + questions[i].question + '</div>'
-// 		+ '<div class="answers">' + answers.join('') + '</div>'
-
-// 		);
-// 	}
-
-// 	$("#quizContainer").output.push()
-
-// }
 
 
 
