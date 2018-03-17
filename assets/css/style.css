@@ -1,3 +1,21 @@
-h1 {
+
+
+.questionsAndAnswers {
 	background-color: grey;
+	font-size: 130%;
+	line-height: 160%;
+	text-align: center;
+}
+
+.seconds {
+	text-align: center;
+	padding-bottom: 5%;
+	padding-top: 5%;
+	font-size: 341%;
+}
+
+.winsAndLosses {
+	text-align: center;
+	padding-top: 5%;
+	font-size: 341%;
 }
