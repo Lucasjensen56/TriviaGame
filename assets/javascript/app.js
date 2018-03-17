@@ -162,6 +162,9 @@ correctAnswers = 0;
 wrongAnswers = 0;
 
 
+
+
+
 $('#answersDiv').on('click', 'button', function(){
 	userChoice = $(this).data("id");
 	questionsAndAnswers[0].correctAnswer;

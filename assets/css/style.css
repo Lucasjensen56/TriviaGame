@@ -19,3 +19,16 @@
 	padding-top: 5%;
 	font-size: 341%;
 }
+
+.timer {
+	text-align: center;
+	padding-top: 7%;
+}
+
+
+#winOrLoseMessage {
+	text-align: center;
+	font-size: 400%;
+	padding-top: 8%;
+
+}
