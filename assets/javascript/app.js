@@ -12,11 +12,6 @@
 
 
 
-
-
-
-
-
 var correctAnswers;
 var wrongAnswers;
 var question;
@@ -262,35 +257,37 @@ $('#answersDiv3').on('click', 'button', function(){
 
 
 
-showTrivia() 
-gameStart()
-showHideQuestion()
+var buttonStart = function() {
+
+	if ($("#startButton").on('click', function() {
+		$("#startButton").fadeOut()
+		showTrivia() 
+		gameStart()
+		showHideQuestion()
 
 
 
 
+	}));
+	
+
+
+		
+
+	
 
 
 
+};
+
+
+buttonStart()
+
+// showTrivia() 
+// gameStart()
+// showHideQuestion()
 
 
 
-
-// startGame
-
-// Player is display with screen with button. 
-// On this page it says"click to start TriviaGame"
-
-// When the button is clicked start game, start timer and display first set up trivia games
-
-// Random trivia question is generated with 4 answers
-	// if the player chooses correctly they win++
-		 	// win is counted and displayed at the end of the game
-	// else if the playe choose the incorrect answer lose++
-			// lose count is stored and displayled at the end of the game
-
-// After the time runs out the next question is displayed
-
-// After player has cycled through all questions display how many times they won and lost
 
 
