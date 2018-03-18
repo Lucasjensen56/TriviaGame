@@ -6,65 +6,59 @@
  -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
  	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ -->	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
 
 
 	<title></title>
 </head>
 <body>
 
+<div class="container">
+
+	<h1 class="center-align font-weight: 500">Harry Potter Trivia</h1>
+
 	<div id="winOrLoseMessage"></div>
 
+ 	<div class="center-align">Time Remaning:<span class="seconds">100</span></div>
 
 
-<div class="timer">
-	<div>Time Remaning	<span class="seconds">10</span>
-</div>
-<!-- 	<div class="seconds">10</div>
- --></div>
+	<div class="questionsAndAnswers">
 
-<!-- <div id="startClock">hello</div>
-<div id="count"></div> -->
-	
+		<div id="questionsDiv"></div>
+
+		<div id="answersDiv"></div>
+		<br>
 
 
+		<div id="questionsDiv1"></div>
 
-<div class="questionsAndAnswers">
-
-	<div id="questionsDiv"></div>
-
-	<div id="answersDiv"></div>
-	<br>
+		<div id="answersDiv1"></div>
+		<br>
 
 
-	<div id="questionsDiv1"></div>
+		<div id="questionsDiv2"></div>
 
-	<div id="answersDiv1"></div>
-	<br>
+		<div id="answersDiv2"></div>
+		<br>
 
+		<div id="questionsDiv3"></div>
 
-	<div id="questionsDiv2"></div>
+		<div id="answersDiv3"></div>
 
-	<div id="answersDiv2"></div>
-	<br>
-
-	<div id="questionsDiv3"></div>
-
-	<div id="answersDiv3"></div>
-
-</div>
+	</div>
 
 
+	<div class="row winsAndLosses">
 
-<div class="winsAndLosses">
-	wins
-	<div id="correctAnswers"></div>
-	losses
-	<div id="wrongAnswers"></div>
+		<div class="col m12">Wins:<span id="correctAnswers"></span></div>
+
+		<div class="col m12">Losses:<span id="wrongAnswers"></span></div>
+
+	</div>
 
 </div>
-
-
 
 
 

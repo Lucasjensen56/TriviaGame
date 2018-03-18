@@ -5,11 +5,6 @@ var wrongAnswers;
 var question;
 var userChoice;
 
-
-
-
-
-
 var questionsAndAnswers = [
 
 		{
@@ -40,7 +35,6 @@ var questionsAndAnswers = [
 
 
 
-
 // displaying questions
 function showTrivia() {
 
@@ -55,6 +49,7 @@ function showTrivia() {
 		button.text(answersArr[i]);
 		button.attr('data-id', i);
 		$('#answersDiv').append(button);
+		$(button).addClass("waves-effect waves-light btn");
 	}
 
 	// question 2 
@@ -96,6 +91,38 @@ function showTrivia() {
 			button.attr('data-id', i);
 			$('#answersDiv3').append(button);
 		}
+}
+
+
+// function to display question, once answered hide it
+
+var showHideQuestion = function() {
+	$("#questionsDiv1, #answersDiv1, #questionsDiv2, #answersDiv2, #questionsDiv3, #answersDiv3").hide();
+	
+	// show question 2 / hide others
+	$("#answersDiv").on('click', function () {
+	$("#questionsDiv").delay(1500).fadeOut(1500);
+	$("#questionsDiv1, #answersDiv1").delay(1000).fadeIn(1700)
+	});
+
+	// quesiton 3
+
+	$("#answersDiv1").on('click', function () {
+	$("#questionsDiv1").fadeOut(1500);
+	$("#questionsDiv2, #answersDiv2").fadeIn()
+	});
+
+
+	// question 4
+	$("#answersDiv2").on('click', function () {
+	$("#questionsDiv2").fadeOut(1500);
+	$("#questionsDiv3, #answersDiv3").fadeIn()
+	});
+
+$("#answersDiv3").on('click', function () {
+	$("#questionsDiv3").fadeOut(1500);
+	// $("#questionsDiv4, #answersDiv4").show()
+	});
 
 }
 
@@ -104,34 +131,10 @@ function showTrivia() {
 
 function gameStart() {
 
+correctAnswers = 0;
+wrongAnswers = 0;
 
-// timer
-
-
-// test
-
-// var timer;
-// $("#startClock").click(function(){
-// var counter = 60;
-// if(!timer){
-// 	timer = setInterval(function() {
-// 		counter--;
-// 	if (counter >= 0) {
-// 		span = document.getElementById("count");
-// 		span.innerHtml = counter;
-// 	}
-// 	if (counter === 0) {
-// 		$("Sorry, you lost!").dialog();
-// 		clearInterval(timer);
-// 	}
-// }, 1000)
-// }
-
-// });
-
-
-// test
-
+	$("#winOrLoseMessage").hide()
 
 	var countDown = function() {
 	$('.seconds').each(function() {
@@ -145,23 +148,9 @@ function gameStart() {
 			clearInterval(countDown);
 			$(".questionsAndAnswers").hide();
 		}
-	
 	});
-	
-
 };
-
 setInterval(countDown, 1000)
-
-
-
-
-
-
-correctAnswers = 0;
-wrongAnswers = 0;
-
-
 
 
 
@@ -169,12 +158,20 @@ $('#answersDiv').on('click', 'button', function(){
 	userChoice = $(this).data("id");
 	questionsAndAnswers[0].correctAnswer;
 	if(userChoice != questionsAndAnswers[0].correctAnswer){
-		$('#answersDiv').text("Wrong Answer!")
+
+		var textWrongAnswer = $('#answersDiv').text("Wrong Answer!")
+		textWrongAnswer.delay(1500).fadeOut(1500)
+
 		wrongAnswers++;
+
 		$('#wrongAnswers').text(wrongAnswers)
 	} else {
 		(userChoice = questionsAndAnswers[0].correctAnswer);
-		$('#answersDiv').text("Correct Answer")
+
+
+		var textCorrectAnswer = $('#answersDiv').text("Correct Answer")
+		textCorrectAnswer.delay(1500).fadeOut(1500)
+
 		correctAnswers++
 		$('#correctAnswers').text(correctAnswers)
 
@@ -187,7 +184,10 @@ $('#answersDiv1').on('click', 'button', function(){
 	userChoice = $(this).data("id");
 	questionsAndAnswers[1].correctAnswer;
 	if(userChoice != questionsAndAnswers[1].correctAnswer){
-		$('#answersDiv1').text("Wrong Answer!")
+
+		var textWrongAnswer1 = $('#answersDiv1').text("Wrong Answer!")
+		textWrongAnswer1.delay(1700).hide(1500)
+
 		wrongAnswers++;
 		$('#wrongAnswers').text(wrongAnswers)
 	} else {
@@ -220,7 +220,6 @@ $('#answersDiv2').on('click', 'button', function(){
 });
 
 
-
 // answer 4
 
 $('#answersDiv3').on('click', 'button', function(){
@@ -247,6 +246,7 @@ $('#answersDiv3').on('click', 'button', function(){
 
 showTrivia() 
 gameStart()
+showHideQuestion()
 
 
 

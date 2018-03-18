@@ -1,8 +1,8 @@
 
 
 .questionsAndAnswers {
-	background-color: grey;
-	font-size: 130%;
+/*	background-color: grey;
+*/	font-size: 130%;
 	line-height: 160%;
 	text-align: center;
 }
@@ -15,20 +15,22 @@
 }
 
 .winsAndLosses {
-	text-align: center;
-	padding-top: 5%;
+/*	text-align: center;
+*/	padding-top: 5%;
 	font-size: 341%;
 }
-
-.timer {
-	text-align: center;
-	padding-top: 7%;
-}
-
 
 #winOrLoseMessage {
 	text-align: center;
 	font-size: 400%;
 	padding-top: 8%;
 
+}
+
+.buttonClass {
+	waves-effect waves-light btn
+}
+
+h1 {
+	font-weight: 50px;
 }
