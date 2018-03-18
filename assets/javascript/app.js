@@ -1,15 +1,4 @@
 
-// notes for tomorrow
-
-// create a start button
-		// this means you need to hide everything at the beginning, then show everything one at a time
-
-// addd pictures
-
-// add display game complete;
-
-
-
 
 
 var correctAnswers;
@@ -109,33 +98,31 @@ function showTrivia() {
 // function to display question, once answered hide it
 
 var showHideQuestion = function() {
+
 	$("#questionsDiv1, #answersDiv1, #questionsDiv2, #answersDiv2, #questionsDiv3, #answersDiv3").hide();
 	
 	// show question 2 / hide others
+	$("#imgDumbledore").show();
 	$("#answersDiv").on('click', function () {
-	$("#questionsDiv").delay(1200).fadeOut(1500);
-	$("#questionsDiv1, #answersDiv1").delay(2000).fadeIn(1700)
+		$("#questionsDiv,#imgDumbledore").delay(1000).fadeOut(1300);
+		$("#questionsDiv1, #answersDiv1, #hogwartsGhostImg").delay(2000).fadeIn(1700)
 	});
 
 	// quesiton 3
-
 	$("#answersDiv1").on('click', function () {
-	$("#questionsDiv1").fadeOut(1500);
-	$("#questionsDiv2, #answersDiv2").fadeIn()
+		$("#questionsDiv1, #hogwartsGhostImg ").delay(1000).fadeOut(1300);
+		$("#questionsDiv2, #answersDiv2, #darkArts").delay(2000).fadeIn(1700)
 	});
-
 
 	// question 4
 	$("#answersDiv2").on('click', function () {
-	$("#questionsDiv2").fadeOut(1500);
-	$("#questionsDiv3, #answersDiv3").fadeIn()
+		$("#questionsDiv2, #darkArts").delay(1000).fadeOut(1300);
+		$("#questionsDiv3, #answersDiv3, #hogwartsTravel").delay(2000).fadeIn(1700)
 	});
 
-$("#answersDiv3").on('click', function () {
-	$("#questionsDiv3").fadeOut(1500);
-	// $("#questionsDiv4, #answersDiv4").show()
+	$("#answersDiv3").on('click', function () {
+		$("#questionsDiv3, hogwartsTravel").delay(1000).fadeOut(1300);
 	});
-
 }
 
 
@@ -155,11 +142,23 @@ wrongAnswers = 0;
 			$(this).html(count -1);
 		} 
 		if (count == 0) {
-			$("#WinOrLoseMessage").text("You lose")
-			// alert("You Lost!")
-			clearInterval(countDown);
+			$("#winOrLoseMessage").fadeIn(1000);
+			$(".timer").hide()
 			$(".questionsAndAnswers").hide();
+			// $(".winsAndLosses").show()
+		} 
+
+		else if ($("#answersDiv3").on('click', 'button', function(){
+			$("#TriviaFinsihed").fadeIn(1000);
+			$(".timer").hide()
+			$(".questionsAndAnswers").hide();
+		})) {
 		}
+
+		// if (userChoice = questionsAndAnswers[3].correctAnswer || userChoice != questionsAndAnswers[3].correctAnswer) {
+
+			
+		// 	$("#winOrLoseMessage"
 	});
 };
 setInterval(countDown, 1000)
@@ -173,17 +172,16 @@ $('#answersDiv').on('click', 'button', function(){
 	if(userChoice != questionsAndAnswers[0].correctAnswer){
 
 		var textWrongAnswer = $('#answersDiv').text("Wrong Answer!")
-		textWrongAnswer.delay(1500).fadeOut(1500)
+		textWrongAnswer.delay(1000).fadeOut(1300)
 
 		wrongAnswers++;
 
 		$('#wrongAnswers').text(wrongAnswers)
 	} else {
 		(userChoice = questionsAndAnswers[0].correctAnswer);
-
-
 		var textCorrectAnswer = $('#answersDiv').text("Correct Answer")
-		textCorrectAnswer.delay(1500).fadeOut(1500)
+		textCorrectAnswer.delay(1000).fadeOut(1300)
+
 
 		correctAnswers++
 		$('#correctAnswers').text(correctAnswers)
@@ -199,13 +197,17 @@ $('#answersDiv1').on('click', 'button', function(){
 	if(userChoice != questionsAndAnswers[1].correctAnswer){
 
 		var textWrongAnswer1 = $('#answersDiv1').text("Wrong Answer!")
-		textWrongAnswer1.delay(1700).hide(1500)
+		textWrongAnswer1.delay(1000).fadeOut(1300)
 
 		wrongAnswers++;
 		$('#wrongAnswers').text(wrongAnswers)
 	} else {
 		(userChoice = questionsAndAnswers[1].correctAnswer);
-		$('#answersDiv1').text("Correct Answer")
+
+		var textCorrectAnswer1 = $('#answersDiv1').text("Correct Answer")
+		textCorrectAnswer1.delay(1000).fadeOut(1300)
+
+
 		correctAnswers++
 		$('#correctAnswers').text(correctAnswers)
 
@@ -219,12 +221,20 @@ $('#answersDiv2').on('click', 'button', function(){
 	userChoice = $(this).data("id");
 	questionsAndAnswers[2].correctAnswer;
 	if(userChoice != questionsAndAnswers[2].correctAnswer){
-		$('#answersDiv2').text("Wrong Answer!")
+
+		var textWrongAnswer2 = $('#answersDiv2').text("Wrong Answer!")
+		textWrongAnswer2.delay(1000).fadeOut(1300)
+
+
+
+
 		wrongAnswers++;
 		$('#wrongAnswers').text(wrongAnswers)
 	} else {
 		(userChoice = questionsAndAnswers[2].correctAnswer);
-		$('#answersDiv2').text("Correct Answer")
+		var textCorrectAnswer2 = $('#answersDiv2').text("Correct Answer")
+		textCorrectAnswer2.delay(1000).fadeOut(1300)
+
 		correctAnswers++
 		$('#correctAnswers').text(correctAnswers)
 
@@ -239,12 +249,15 @@ $('#answersDiv3').on('click', 'button', function(){
 	userChoice = $(this).data("id");
 	questionsAndAnswers[3].correctAnswer;
 	if(userChoice != questionsAndAnswers[3].correctAnswer){
-		$('#answersDiv3').text("Wrong Answer!")
+		var textWrongAnswer3 = $('#answersDiv3').text("Wrong Answer!")
+		textWrongAnswer3.delay(1000).fadeOut(1300)
 		wrongAnswers++;
 		$('#wrongAnswers').text(wrongAnswers)
 	} else {
 		(userChoice = questionsAndAnswers[3].correctAnswer);
-		$('#answersDiv3').text("Correct Answer")
+		var textCorrectAnswer3 = $('#answersDiv3').text("Correct Answer")
+		textCorrectAnswer3.delay(1000).fadeOut(1300)
+
 		correctAnswers++
 		$('#correctAnswers').text(correctAnswers)
 
@@ -256,18 +269,14 @@ $('#answersDiv3').on('click', 'button', function(){
 }
 
 
-
 var buttonStart = function() {
-
+	$("img").hide()
+	$("#winOrLoseMessage").hide()
 	if ($("#startButton").on('click', function() {
 		$("#startButton").fadeOut()
+		showHideQuestion()
 		showTrivia() 
 		gameStart()
-		showHideQuestion()
-
-
-
-
 	}));
 	
 

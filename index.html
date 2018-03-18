@@ -5,9 +5,7 @@
  <!-- <link rel="stylesheet" type="text/css" href="assets/reset.css">
  -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
- 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
- -->	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
 
 
@@ -15,58 +13,51 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container center-align">
 
 
-	<h1 class="center-align font-weight: 500">Harry Potter Trivia</h1>
+	<h1>Harry Potter Trivia</h1>
 
 	<button id="startButton">Click Here to Start</button>
 
-
-	<div id="winOrLoseMessage"></div>
-
- 	<div class="center-align">Time Remaning:<span class="seconds">100</span></div>
-
+ 	<div class="timer">Time Remaning:<span class="seconds">100</span></div>
 
 	<div class="questionsAndAnswers">
 
 		<div id="questionsDiv"></div>
-
 		<div id="answersDiv"></div>
-		<div id="imgDumbledore"></div>
-<!-- 		<img src="AlbusDumbledore_PM_B5C27M3_DumbledoresEscape_Moment.jpg" alt="AlbusDumbledore_PM_B5C27M3_DumbledoresEscape_Moment">
- -->
+ 		<img class="responsive-img z-depth-5" id="imgDumbledore" src="assets/images/AlbusDumbledore_PM_B5C27M3_DumbledoresEscape_Moment.jpg" alt="Dumbledore Img">
 
 		<div id="questionsDiv1"></div>
-
 		<div id="answersDiv1"></div>
-<!-- 		<br>
- -->
+		<img class="responsive-img"  id="hogwartsGhostImg" src="assets/images/ghosts.jpg" alt="Hogwarts Ghosts">
+
 
 		<div id="questionsDiv2"></div>
 
 		<div id="answersDiv2"></div>
-<!-- 		<br>
- -->
+		<img class="responsive-img"  id="darkArts" src="assets/images/image.jpeg" alt="Dark Arts">
+
+
 		<div id="questionsDiv3"></div>
-
 		<div id="answersDiv3"></div>
+		<img class="responsive-img"  id="hogwartsTravel" src="assets/images/KingsCross_PM_B4C37M2_StudentsAtPlatform934_Moment.jpg" alt="Howgarts Travel">
 
-	</div>
+</div>
 
+<div id="winOrLoseMessage">Time's UP!!</div>
 
-	<div class="row winsAndLosses">
+<div id="TriviaFinsihed">Trivia Finished!</div>
 
-		<div class="col m12">Wins:<span id="correctAnswers"></span></div>
-
-		<div class="col m12">Losses:<span id="wrongAnswers"></span></div>
-
-	</div>
+<div class="row winsAndLosses">
+	<div class="col m12">Wins:<span id="correctAnswers"></span></div>
+	<div class="col m12">Losses:<span id="wrongAnswers"></span></div>
+</div>
 
 </div>
 
 
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="assets/javascript/app.js"></script>
 </body>
 </html>

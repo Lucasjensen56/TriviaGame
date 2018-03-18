@@ -1,5 +1,10 @@
 
 
+html {
+	background-color: #878480;
+}
+
+
 .questionsAndAnswers {
 /*	background-color: grey;
 */	font-size: 130%;
@@ -7,11 +12,10 @@
 	text-align: center;
 }
 
-.seconds {
-	text-align: center;
-	padding-bottom: 5%;
-	padding-top: 5%;
-	font-size: 341%;
+.timer {
+	font-size: 243%;
+    padding-bottom: 12%;
+    padding-top: 2%;
 }
 
 .winsAndLosses {
@@ -22,7 +26,7 @@
 
 #winOrLoseMessage {
 	text-align: center;
-	font-size: 400%;
+	font-size: 500%;
 	padding-top: 8%;
 
 }
@@ -33,4 +37,14 @@
 
 h1 {
 	font-weight: 50px;
+}
+
+#imgDumbledore {
+    border:0;
+    margin-top: 5%;
+    border: 1px solid #878481;
+}
+
+button {
+	    border-radius: 21px;
 }
