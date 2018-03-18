@@ -1,4 +1,21 @@
 
+// notes for tomorrow
+
+// create a start button
+		// this means you need to hide everything at the beginning, then show everything one at a time
+
+// addd pictures
+
+// add display game complete;
+
+
+
+
+
+
+
+
+
 
 var correctAnswers;
 var wrongAnswers;
@@ -101,8 +118,8 @@ var showHideQuestion = function() {
 	
 	// show question 2 / hide others
 	$("#answersDiv").on('click', function () {
-	$("#questionsDiv").delay(1500).fadeOut(1500);
-	$("#questionsDiv1, #answersDiv1").delay(1000).fadeIn(1700)
+	$("#questionsDiv").delay(1200).fadeOut(1500);
+	$("#questionsDiv1, #answersDiv1").delay(2000).fadeIn(1700)
 	});
 
 	// quesiton 3
@@ -155,6 +172,7 @@ setInterval(countDown, 1000)
 
 
 $('#answersDiv').on('click', 'button', function(){
+	$("#imgDumbledore").show()
 	userChoice = $(this).data("id");
 	questionsAndAnswers[0].correctAnswer;
 	if(userChoice != questionsAndAnswers[0].correctAnswer){
