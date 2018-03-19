@@ -1,16 +1,11 @@
 
 
-html {
-	background-color: #878480;
-}
-
-
 .questionsAndAnswers {
-/*	background-color: grey;
-*/	font-size: 130%;
+	font-size: 130%;
 	line-height: 160%;
 	text-align: center;
 }
+
 
 .timer {
 	font-size: 243%;
@@ -31,13 +26,29 @@ html {
 
 }
 
-.buttonClass {
-	waves-effect waves-light btn
-}
 
 h1 {
 	font-weight: 50px;
+	font-family: 'Montserrat', sans-serif;
+
 }
+
+body {
+	font-family: 'Exo', sans-serif;
+}
+
+.btn {
+margin-top: 1%;
+margin-right: 1%;
+margin-bottom: 3%;
+
+}
+
+
+#questionsDiv {
+    font-size: 163%;
+/*    padding-bottom: 4%;
+*/}
 
 #imgDumbledore {
     border:0;
@@ -45,6 +56,8 @@ h1 {
     border: 1px solid #878481;
 }
 
-button {
-	    border-radius: 21px;
+
+#TriviaFinsihed {
+	font-size: 130%;
+
 }

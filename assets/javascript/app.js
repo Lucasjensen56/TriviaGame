@@ -50,8 +50,11 @@ function showTrivia() {
 		button.text(answersArr[i]);
 		button.attr('data-id', i);
 		$('#answersDiv').append(button);
-		$(button).addClass("waves-effect waves-light btn");
+		$(button).addClass("btn #37474f blue-grey darken-3");
 	}
+
+
+
 
 	// question 2 
 
@@ -65,6 +68,7 @@ function showTrivia() {
 		button.text(answersArr[i]);
 		button.attr('data-id', i);
 		$('#answersDiv1').append(button);
+		$(button).addClass("btn #37474f blue-grey darken-3");
 	}
 
 // question 3
@@ -78,6 +82,7 @@ function showTrivia() {
 		button.text(answersArr[i]);
 		button.attr('data-id', i);
 		$('#answersDiv2').append(button);
+		$(button).addClass("btn #37474f blue-grey darken-3");
 	}
 
 // question 4
@@ -91,6 +96,7 @@ function showTrivia() {
 			button.text(answersArr[i]);
 			button.attr('data-id', i);
 			$('#answersDiv3').append(button);
+			$(button).addClass("btn #37474f blue-grey darken-3");
 		}
 }
 
@@ -272,6 +278,7 @@ $('#answersDiv3').on('click', 'button', function(){
 var buttonStart = function() {
 	$("img").hide()
 	$("#winOrLoseMessage").hide()
+	$("#TriviaFinsihed").hide()
 	if ($("#startButton").on('click', function() {
 		$("#startButton").fadeOut()
 		showHideQuestion()

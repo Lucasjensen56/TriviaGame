@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html class="#bdbdbd grey lighten-1
+
+">
 <head>
 
  <!-- <link rel="stylesheet" type="text/css" href="assets/reset.css">
  -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+ 	<link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+ 	<link href="https://fonts.googleapis.com/css?family=Exo:900" rel="stylesheet">
 
 
 
@@ -13,14 +17,15 @@
 </head>
 <body>
 
+
 <div class="container center-align">
 
 
 	<h1>Harry Potter Trivia</h1>
 
-	<button id="startButton">Click Here to Start</button>
+	<button class="btn #37474f blue-grey darken-3" id="startButton">Click Here to Start</button>
 
- 	<div class="timer">Time Remaning:<span class="seconds">100</span></div>
+ 	<div class="timer">Time Remaning:<span class="seconds">30</span></div>
 
 	<div class="questionsAndAnswers">
 
@@ -30,24 +35,24 @@
 
 		<div id="questionsDiv1"></div>
 		<div id="answersDiv1"></div>
-		<img class="responsive-img"  id="hogwartsGhostImg" src="assets/images/ghosts.jpg" alt="Hogwarts Ghosts">
+		<img class="responsive-img z-depth-5"  id="hogwartsGhostImg" src="assets/images/ghosts.jpg" alt="Hogwarts Ghosts">
 
 
 		<div id="questionsDiv2"></div>
 
 		<div id="answersDiv2"></div>
-		<img class="responsive-img"  id="darkArts" src="assets/images/image.jpeg" alt="Dark Arts">
+		<img class="responsive-img z-depth-5"  id="darkArts" src="assets/images/image.jpeg" alt="Dark Arts">
 
 
 		<div id="questionsDiv3"></div>
 		<div id="answersDiv3"></div>
-		<img class="responsive-img"  id="hogwartsTravel" src="assets/images/KingsCross_PM_B4C37M2_StudentsAtPlatform934_Moment.jpg" alt="Howgarts Travel">
+		<img class="responsive-img z-depth-5"  id="hogwartsTravel" src="assets/images/KingsCross_PM_B4C37M2_StudentsAtPlatform934_Moment.jpg" alt="Howgarts Travel">
 
 </div>
 
 <div id="winOrLoseMessage">Time's UP!!</div>
 
-<div id="TriviaFinsihed">Trivia Finished!</div>
+<div id="TriviaFinsihed">Trivia Finished! Review Your Total score below!</div>
 
 <div class="row winsAndLosses">
 	<div class="col m12">Wins:<span id="correctAnswers"></span></div>
