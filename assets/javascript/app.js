@@ -288,12 +288,6 @@ var buttonStart = function() {
 	
 
 
-		
-
-	
-
-
-
 };
 
 
